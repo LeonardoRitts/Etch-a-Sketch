@@ -1,0 +1,37 @@
+body{
+    background-color: aliceblue;
+}
+#container{
+    display: flex;
+    padding: 1.5em;
+    }
+.gridRow{
+        min-width: 5px;
+    min-height: 5px;
+    margin: 0%;
+    padding:0%;
+    border-radius: 10px;
+}
+
+.cell{
+    border: 0.5px solid darkgrey;
+    min-width: 5px;
+min-height: 5px;
+margin: 0%;
+padding: 0%;
+border-radius: 10px;
+    }
+
+#yellow{
+    background-color: yellow;
+    border: yellow:
+}
+#btn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+}
+
