@@ -20,7 +20,6 @@ function makeColumn(number) {
         for (j = 0; j < number; j++) {
             let newCell = document.createElement("div");
             rows[j].appendChild(newCell).className = "cell";
-            var colors = ['#ff0000', '#00ff00', '#0000ff'];
             //Add action to change color on mouse over
             newCell.setAttribute('onMouseOver', 'style.background = "black"');
         }
