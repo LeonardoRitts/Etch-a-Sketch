@@ -1,9 +1,27 @@
+html {
+    display: table;
+    margin: auto;
+}
+
 body{
     background-color: aliceblue;
+display: table-cell;
+vertical-align: middle;
+padding-top: 2em;
+}
+
+h1{
+    font-size: x-small;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #container{
     display: flex;
-    padding: 1.5em;
+    padding: 0.5em;
+    max-width: max-content;
+    max-height: max-content;
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 15px;
     }
 .gridRow{
         min-width: 5px;
@@ -26,12 +44,29 @@ border-radius: 10px;
     background-color: yellow;
     border: yellow:
 }
-#btn{
-    margin-top: 20px;
-    margin-bottom: 20px;
+#btn, #reload{
+    margin-top: 5px;
+    margin-bottom: 5px;
     border-radius: 20px;
-    background-color: black;
-    color: whitesmoke;
-    border: none;
+    background-color: rgb(219, 219, 219);
+    color: rgb(56, 47, 47);
 }
 
+#btnBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100px;
+    max-height: 5em;
+    padding: 0.3em;
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 20px;
+}
+#inputBox{
+    border: 1px solid rgb(219,219,219);
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 7px;
+}

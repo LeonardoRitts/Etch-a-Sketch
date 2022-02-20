@@ -1,12 +1,12 @@
 const container = document.getElementById("container");
 let rows = document.getElementsByClassName("gridRow");
 let cells = document.getElementsByClassName("cell")
-let btn = document.getElementById('btn')
-
+let btn = document.getElementById("btn")
+let reload = document.getElementById('reload')
 //reset screen
-btn.setAttribute('onClick', 'window.location.reload()')
-btn.addEventListener('onClick', play());
-
+reload.addEventListener('click', deleteContent);
+//Start game
+btn.addEventListener('click', play);
 
 function makeRow(number) {
     for (k = 0; k < number; k++) {
@@ -25,11 +25,28 @@ function makeColumn(number) {
         }
     }
 }
+
 function play() {
-    let request = prompt("How squares per side should the board be?", "Choose from 10 to 100");
-    if (request > 100) {
-        let request = prompt("Sorry, it needs to be less than 101.", "What will it be?");
+    let num = document.querySelector('input').value;
+    if (num > 100) {
+        alert("Less than 100")
     }
-    makeRow(request);
-    makeColumn(request);
+    makeRow(num);
+    makeColumn(num);
 }
+
+function deleteContent() {
+    if (document.getElementById('container').textContent != " ") {
+        container.textContent = "";
+    }
+}
+
+// Previous functioned used to start game with a prompt
+// function play() {
+//     let request = prompt("How squares per side should the board be?", "Choose from 10 to 100");
+//     if (request > 100) {
+//         let request = prompt("Sorry, it needs to be less than 101.", "What will it be?");
+//     }
+//     makeRow(request);
+//     makeColumn(request);
+// }
